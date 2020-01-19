@@ -1,0 +1,4 @@
+title: jekyll-theme-nothing
+remote_theme: per1234/jekyll-theme-nothing
+plugins:
+  - jekyll-seo-tag

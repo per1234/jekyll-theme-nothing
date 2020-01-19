@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+    <header class="page-header">
+      <h1 class="page-title">{{ site.title }}</h1>
+
+      <div class="navigation">
+        <hr>
+
+        {% if page.name != "index.md" %}
+          <span class="breadcrumb">
+            <a href="{{ site.github.url }}">Home</a> > {{ page.title }}
+          </span>
+        {% endif %}
+
+        <span class="repository-link">
+          <a href="{{ site.github.repository_url }}">GitHub Repository</a>
+        </span>
+      </div>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        Contributions are welcome! If you have an improvement or correction, please submit a <a href="{{ site.github.repository_url }}/pulls">pull request</a> or <a href="{{ site.github.issues_url }}">issue report</a>.
+      </footer>
+    </main>
+  </body>
+</html>
